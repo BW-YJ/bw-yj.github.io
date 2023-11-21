@@ -9,7 +9,6 @@ export default defineConfig({
   plugins: [
     vue(),
   ],
-  base: "/wedding-invitation",
   build: {
     assetsDir: ".",
     rollupOptions: {
