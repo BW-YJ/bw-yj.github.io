@@ -1,5 +1,13 @@
 {
   "files": [],
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "module": "ES6",
+    "moduleResolution": "node",
+    "typeRoots" : ["./@types", "./node_modules/@types,./src"]
+  },
+
   "references": [
     {
       "path": "./tsconfig.node.json"
