@@ -3,7 +3,7 @@
     class="bg-black d-flex flex-column w-100 h-200px align-center justify-center font-easta-heavy"
   >
     <div>
-      <div class="align-content-start">초대합니다.</div>
+      <div class="align-content-start sub-title">초대합니다.</div>
 
       <br />
       <div class="greeting-content">

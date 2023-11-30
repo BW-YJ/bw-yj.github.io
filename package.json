@@ -17,6 +17,7 @@
     "@mdi/font": "5.9.55",
     "pinia": "^2.1.7",
     "roboto-fontface": "*",
+    "rollup-plugin-copy": "^3.5.0",
     "vue": "^3.3.4",
     "vue-router": "^4.2.5",
     "webfontloader": "^1.0.0"

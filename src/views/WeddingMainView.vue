@@ -2,6 +2,7 @@
 import WeddingTitle from '@/components/WeddingTitle.vue'
 import WeddingInformation from '@/components/WeddingInformation.vue'
 import WeddingGreeting from '@/components/WeddingGreeting.vue'
+import WeddingHallMap from '@/components/WeddingHallMap.vue'
 </script>
 
 <template>
@@ -14,6 +15,7 @@ import WeddingGreeting from '@/components/WeddingGreeting.vue'
     style="background-color: white; height: 4px"
   ></v-divider>
   <WeddingGreeting />
+  <WeddingHallMap />
 </template>
 
 <style lang="scss" scoped>

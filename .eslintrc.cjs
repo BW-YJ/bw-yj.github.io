@@ -2,6 +2,7 @@
 require('@rushstack/eslint-patch/modern-module-resolution')
 
 module.exports = {
+  globals : {kakao:true},
   root: true,
   'extends': [
     'plugin:vue/vue3-essential',

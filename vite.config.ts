@@ -2,6 +2,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import copy from 'rollup-plugin-copy'
 import * as path from 'path'
 
 // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
@@ -16,7 +17,15 @@ export default defineConfig({
       input: './index.html',
       output: {
         dir: 'docs'
-      }
+      },
+      plugins: [
+        copy({
+          targets: [
+            // 복사하고 싶은 파일 지정
+            { src: 'src/assets/images/*', dest: 'docs/images/' }
+          ]
+        })
+      ]
     }
   },
   resolve: {
