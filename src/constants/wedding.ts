@@ -1,6 +1,15 @@
 export const WEDDING = {
-  DAY: '2024-03-09',
-  TIME: '17:30',
-  BROOM: 'JASON',
-  BRIDE: 'JENNY'
+  YEAR: '2024',
+  MONTH: '03',
+  DATE: '09',
+  DAY: '토요일',
+  PLACE: 'JK아트컨벤션',
+  HALL: '그랜드홀',
+  TIME: '5:30 PM',
+  BROOM: '김병우',
+  BRIDE: '오예진',
+  BROOM_FATHER: '김양빈',
+  BROOM_MOTHER: '박정희',
+  BRIDE_FATHER: '오명석',
+  BRIDE_MOTHER: '정영희'
 }

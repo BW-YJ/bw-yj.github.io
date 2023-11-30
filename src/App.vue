@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TitleView from '@/views/WeddingTitleView.vue'
+import WeddingMainView from '@/views/WeddingMainView.vue'
 </script>
 
 <template>
@@ -7,7 +7,7 @@ import TitleView from '@/views/WeddingTitleView.vue'
     <header class="bg-black"></header>
     <body>
       <div class="bg-black w-100 h-100">
-        <TitleView />
+        <WeddingMainView />
       </div>
     </body>
   </v-app>
