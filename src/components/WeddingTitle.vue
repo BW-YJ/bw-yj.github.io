@@ -9,9 +9,12 @@
       <v-divider vertical class="mx-4">|</v-divider>
       <div>{{ WEDDING.BRIDE }}</div>
     </div>
-    <div class="pa-15">
-      <img src="https://bw-yj.github.io/images/IMG_2460.png" />" alt="Polaroid Image"
-      class="polaroid-image" />
+    <div class="pa-15 mobile-100-w-50">
+      <img
+        src="https://bw-yj.github.io/images/IMG_2460.png"
+        alt="Polaroid Image"
+        class="polaroid-image"
+      />
     </div>
   </div>
 </template>

@@ -1,3 +1,13 @@
+.mobile-100-w-50{
+  width : 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  .mobile-100-w-50 {
+    width: 100%; /* 화면이 600px 이하일 때 100% 너비로 설정 */
+  }
+}
+
 .h-500px {
   height: 500px;
 }
