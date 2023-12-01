@@ -11,10 +11,12 @@
     "dev": "vite",
     "format": "prettier --write src/",
     "preview": "vite preview",
-    "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false"
+    "type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@mdi/font": "5.9.55",
+    "gh-pages": "^6.1.0",
     "pinia": "^2.1.7",
     "roboto-fontface": "*",
     "rollup-plugin-copy": "^3.5.0",
