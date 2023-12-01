@@ -27,5 +27,8 @@ jobs:
       - name: Copy files
         run: cp -r src/assets/images docs/
 
+      - name: set git
+        run: git config --global user.email "okyb0309@gmail.com"
+
       - name: Deploy to hosting (e.g., GitHub Pages)
         run: npm run deploy
