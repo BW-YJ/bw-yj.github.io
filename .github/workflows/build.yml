@@ -31,7 +31,7 @@ jobs:
         run: git config user.email "okyb0309@gmail.com"
 
       - name: set git user name
-        run: git config user.name "bw-yj"
+        run: git config user.name "bwyj"
 
       - name: Deploy to hosting (e.g., GitHub Pages)
         run: npm run deploy
