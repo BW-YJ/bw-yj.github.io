@@ -30,10 +30,11 @@ jobs:
       - name: set git user email
         run: git config user.email "okyb0309@gmail.com"
 
-      - name: set git user name
-        run: git config user.name "bwyj"
+      - name: set git user email
+        run: git config user.email "okyb0309@gmail.com"
 
       - name: Deploy to hosting (e.g., GitHub Pages)
-        run: npm run deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_TOKEN }}
+          publish_dir: /docs  # Set to your build output directory
