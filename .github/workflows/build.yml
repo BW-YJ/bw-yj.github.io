@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
@@ -22,7 +22,7 @@ jobs:
         run: npm install
 
       - name: Build Vite
-        run: npm run build
+        run: npm run build:docs
 
       - name: Copy files
         run: cp -r src/assets/images docs/
@@ -37,4 +37,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_TOKEN }}
-          publish_dir: /docs  # Set to your build output directory
+          publish_dir: ./docs  # Set to your build output directory
