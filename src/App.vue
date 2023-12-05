@@ -6,7 +6,7 @@ import WeddingMainView from '@/views/WeddingMainView.vue'
   <v-app id="app">
     <header class="bg-black"></header>
     <body>
-      <div class="bg-black w-100 h-100">
+      <div class="bg-black w-100 h-100 pa-10">
         <WeddingMainView />
       </div>
     </body>

@@ -1,8 +1,6 @@
 <template>
-  <div
-    class="d-flex justify-center flex-column align-center ga-5 font-easta-heavy pt-10 pl-5 pr-5 pb-5"
-  >
-    <div class="d-flex flex-row pl-5 w-100">
+  <div class="d-flex justify-center flex-column align-center ga-5 font-easta-heavy">
+    <div class="d-flex flex-row w-100">
       <div class="sub-title">오시는길</div>
     </div>
     <div id="map" class="mobile-map"></div>
