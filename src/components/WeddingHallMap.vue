@@ -1,9 +1,33 @@
 <template>
-  <div class="d-flex justify-center flex-column align-center ga-5 font-easta-heavy">
+  <div class="d-flex justify-center flex-column align-center ga-5 pa-10 font-easta-heavy">
     <div class="d-flex flex-row w-100">
       <div class="sub-title">오시는길</div>
     </div>
-    <div id="map" class="mobile-map"></div>
+    <div class="map_wrap">
+      <div
+        id="map"
+        class="mobile-map"
+        style="width: 100%; height: 100%; position: relative; overflow: hidden"
+      ></div>
+      <!-- 지도타입 컨트롤 div 입니다 -->
+      <div class="custom_typecontrol radius_border">
+        <span id="btnRoadmap" class="selected_btn" onclick="setMapType('roadmap')">지도</span>
+        <span id="btnSkyview" class="btn" onclick="setMapType('skyview')">스카이뷰</span>
+      </div>
+      <!-- 지도 확대, 축소 컨트롤 div 입니다 -->
+      <div class="custom_zoomcontrol radius_border">
+        <span :onClick="zoomIn"
+          ><img
+            src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_plus.png"
+            alt="확대"
+        /></span>
+        <span :onClick="zoomOut"
+          ><img
+            src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png"
+            alt="축소"
+        /></span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -14,12 +38,9 @@ const container = ref(null)
 const weddingPosition = ref(null)
 
 onMounted(() => {
-  console.log('mounted')
   if (window.kakao?.maps) {
-    console.log('1')
     initMap()
   } else {
-    console.log('2')
     loadScript()
   }
 })
@@ -35,8 +56,7 @@ const loadScript = () => {
 const initMap = () => {
   container.value = document.getElementById('map')
   const options = {
-    center: new window.kakao.maps.LatLng(37.2429362, 131.8624647),
-    level: 3
+    center: new window.kakao.maps.LatLng(37.2429362, 131.8624647)
   }
   map = new window.kakao.maps.Map(container.value, options)
 
@@ -52,6 +72,7 @@ const placesSearchCB = (data, status, pagination) => {
       bounds.extend(new window.kakao.maps.LatLng(data[i].y, data[i].x))
     }
     map.setBounds(bounds)
+    map.setLevel(5)
   }
 }
 
@@ -85,8 +106,53 @@ const displayMarker = (place) => {
     yAnchor: 1
   })
 }
+
+const zoomIn = () => {
+  map.setLevel(map.getLevel() - 1)
+}
+
+const zoomOut = () => {
+  map.setLevel(map.getLevel() + 1)
+}
 </script>
 
 <style lang="scss" scoped>
 @import '/src/styles/common.scss';
+
+.map_wrap {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 350px;
+}
+.radius_border {
+  border: 1px solid #919191;
+  border-radius: 5px;
+}
+.custom_zoomcontrol {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  width: 36px;
+  height: 80px;
+  overflow: hidden;
+  z-index: 1;
+  background-color: #f5f5f5;
+}
+.custom_zoomcontrol span {
+  display: block;
+  width: 36px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px;
+}
+.custom_zoomcontrol span img {
+  width: 15px;
+  height: 15px;
+  border: none;
+}
+.custom_zoomcontrol span:first-child {
+  border-bottom: 1px solid #bfbfbf;
+}
 </style>

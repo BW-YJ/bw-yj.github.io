@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-black d-flex flex-column w-100 h-200px font-easta-heavy pt-10">
+  <div class="bg-black d-flex flex-column w-100 h-200px font-easta-heavy pa-10">
     <div>
       <div class="sub-title">초대합니다</div>
 
