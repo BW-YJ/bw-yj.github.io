@@ -7,14 +7,7 @@
       <div
         id="map"
         class="mobile-map"
-        style="width: 100%; height: 100%; position: relative; overflow: hidden"
       ></div>
-      <!-- 지도타입 컨트롤 div 입니다 -->
-      <div class="custom_typecontrol radius_border">
-        <span id="btnRoadmap" class="selected_btn" onclick="setMapType('roadmap')">지도</span>
-        <span id="btnSkyview" class="btn" onclick="setMapType('skyview')">스카이뷰</span>
-      </div>
-      <!-- 지도 확대, 축소 컨트롤 div 입니다 -->
       <div class="custom_zoomcontrol radius_border">
         <span :onClick="zoomIn"
           ><img
@@ -92,17 +85,17 @@ const displayMarker = (place) => {
   marker.setMap(map)
 
   //TODO : 마커 정리하기
-  var content =
+  var overayContent =
     '<div class="customoverlay">' +
-    '  <a href="https://map.kakao.com/link/map/11394059" target="_blank">' +
+    '  <a href="https://map.naver.com/p/entry/place/1897374821?c=15.00,0,0,0,dh" target="_blank">' +
     '    <span class="title">JK아트컨벤션</span>' +
     '  </a>' +
     '</div>'
 
   var customOverlay = new window.kakao.maps.CustomOverlay({
-    map: map,
+    map:map,
     position: markerPosition,
-    content: content,
+    content: overayContent,
     yAnchor: 1
   })
 }
@@ -155,4 +148,16 @@ const zoomOut = () => {
 .custom_zoomcontrol span:first-child {
   border-bottom: 1px solid #bfbfbf;
 }
+.customoverlay {
+  position:relative;
+  bottom:85px;
+  border-radius:6px;
+  border: 1px solid #ccc;
+  border-bottom:2px solid #ddd;
+  float:left;
+}
+.customoverlay:nth-of-type(n) {border:0; box-shadow:0px 1px 2px #888;}
+.customoverlay a {display:block;text-decoration:none;color:#000;text-align:center;border-radius:6px;font-size:14px;font-weight:bold;overflow:hidden;background: #d95050;background: #d95050 url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;}
+.customoverlay .title {display:block;text-align:center;background:#fff;margin-right:35px;padding:10px 15px;font-size:14px;font-weight:bold;}
+.customoverlay:after {content:'';position:absolute;margin-left:-12px;left:50%;bottom:-12px;width:22px;height:12px;background:url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
 </style>
