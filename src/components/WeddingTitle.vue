@@ -1,5 +1,6 @@
 <template>
-  <div data-aos="fade-up" class="bg-black d-flex flex-column w-100 align-center justify-center font-easta-heavy pt-10">
+  <div data-aos="fade-up" data-aos-duration="1500"
+       class="bg-black d-flex flex-column w-100 align-center justify-center font-easta-heavy pt-10">
     <div class="d-flex text-xl-h3">WE ARE GETTING MARRIED</div>
     <div class="d-flex text-xl-h3">저희 결혼 합니다.</div>
     <br/>

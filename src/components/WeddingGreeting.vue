@@ -1,5 +1,6 @@
 <template>
-  <div data-aos="fade-left" class="bg-black d-flex flex-column w-100 h-200px font-easta-heavy pa-10">
+  <div data-aos="fade-left" data-aos-duration="1500"
+       class="bg-black d-flex flex-column w-100 h-200px font-easta-heavy pa-10">
     <div>
       <div class="sub-title">초대합니다</div>
 

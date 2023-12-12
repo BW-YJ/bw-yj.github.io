@@ -1,5 +1,6 @@
 <template>
   <div data-aos="fade-up"
+       data-aos-duration="1500"
        class="bg-white d-flex flex-row w-100 align-center justify-center font-easta-heavy ga-10 pa-10"
   >
     <div class="d-flex flex-column align-center justify-end info-date">

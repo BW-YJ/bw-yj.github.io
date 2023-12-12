@@ -1,6 +1,7 @@
 <template>
 
-  <div data-aos="fade-up" class="d-flex justify-center flex-column align-center ga-5 pa-10 font-easta-heavy">
+  <div data-aos="fade-up" data-aos-duration="1500"
+       class="d-flex justify-center flex-column align-center ga-5 pa-10 font-easta-heavy">
     <div class="d-flex flex-row w-100">
       <div class="sub-title">오시는길</div>
     </div>
