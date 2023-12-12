@@ -1,6 +1,6 @@
 <template>
 
-  <div class="d-flex justify-center flex-column align-center ga-5 pa-10 font-easta-heavy">
+  <div data-aos="fade-up" class="d-flex justify-center flex-column align-center ga-5 pa-10 font-easta-heavy">
     <div class="d-flex flex-row w-100">
       <div class="sub-title">오시는길</div>
     </div>
@@ -58,7 +58,7 @@ const initMap = () => {
   var ps = new window.kakao.maps.services.Places()
   ps.keywordSearch('JK아트컨벤션', placesSearchCB)
 }
-const placesSearchCB = (data, status, pagination) => {
+const placesSearchCB = (data, status) => {
   if (status === window.kakao.maps.services.Status.OK) {
     var bounds = new window.kakao.maps.LatLngBounds()
 
@@ -94,7 +94,7 @@ const displayMarker = (place) => {
       '  </a>' +
       '</div>'
 
-  var customOverlay = new window.kakao.maps.CustomOverlay({
+  new window.kakao.maps.CustomOverlay({
     map: map,
     position: markerPosition,
     content: overayContent,
