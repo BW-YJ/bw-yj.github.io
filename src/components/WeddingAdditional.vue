@@ -11,7 +11,7 @@
         <v-btn
           variant="outlined"
           color="deep-blue-accent-4"
-          href="https://agent.maruw.co.kr/iframe?url=https%3A%2F%2Fagent.maruw.co.kr%2Fmobile%2Fbojagicard%2Fproduct%3F"
+          href="https://agent.maruw.co.kr/mobile/product?shop=bojagicard&idx=e75f1236187d42c719996f84495b7b34"
           target="_blank"
           >바로 주문</v-btn
         >
