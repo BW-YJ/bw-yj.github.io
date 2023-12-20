@@ -2,7 +2,7 @@
   <div
     data-aos="fade-up"
     data-aos-duration="1500"
-    class="d-flex flex-column align-center w-100 h-200px font-easta-heavy pa-10"
+    class="d-flex flex-column w-100 h-200px font-easta-heavy pa-10 h-500px"
   >
     <div>
       <div class="sub-title">초대합니다</div>
@@ -22,11 +22,4 @@
 
 <style lang="scss" scoped>
 @import '/src/styles/common.scss';
-
-.greeting-title {
-}
-
-.greeting-content {
-  font-size: 0.8rem;
-}
 </style>

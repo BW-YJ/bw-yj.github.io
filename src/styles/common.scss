@@ -40,6 +40,7 @@
   font-size: 60px;
 }
 .sub-title{
+  font-weight: bold;
   font-size: 1.5rem;
 }
 .bg-gray{
@@ -69,4 +70,18 @@
   border: 1.5px solid #000000; /* 흰색 테두리 추가 */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
   transform: rotate(3deg); /* 회전 효과 추가 */
+}
+
+.greeting-title {
+}
+
+.greeting-content {
+  font-size: 0.8rem;
+}
+.map-title {
+  font-size: 0.8rem;
+}
+
+.map-content {
+  font-size: 0.8rem;
 }
