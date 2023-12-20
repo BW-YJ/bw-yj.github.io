@@ -4,11 +4,9 @@ import WeddingMainView from '@/views/WeddingMainView.vue'
 
 <template>
   <v-app id="app">
-    <header class="bg-black"></header>
+    <header></header>
     <body>
-      <div class="bg-black w-100 h-100">
-        <WeddingMainView />
-      </div>
+      <WeddingMainView />
     </body>
   </v-app>
 </template>

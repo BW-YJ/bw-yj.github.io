@@ -55,15 +55,18 @@
 
 .polaroid-container {
   position: relative;
-  width: 300px; /* 폴라로이드 전체 너비 조절 */
-  margin: 20px;
+  width: 100%; /* 폴라로이드 전체 너비 조절 */
+  margin: 50px;
+  border: 10px solid #000000; /* 흰색 테두리 추가 */
 }
 
 .polaroid-image {
   width: 100%;
   max-width: 100%;
   height: auto;
-  border: 10px solid #fff; /* 흰색 테두리 추가 */
+  margin: 10px;
+  padding: 10px;
+  border: 1.5px solid #000000; /* 흰색 테두리 추가 */
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
-  transform: rotate(4deg); /* 회전 효과 추가 */
+  transform: rotate(3deg); /* 회전 효과 추가 */
 }

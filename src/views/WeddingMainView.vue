@@ -6,16 +6,13 @@ import WeddingHallMap from '@/components/WeddingHallMap.vue'
 </script>
 
 <template>
-  <WeddingTitle />
-  <WeddingInformation />
-  <v-divider
-    class="my-divider"
-    :inset="true"
-    height="4px"
-    style="background-color: white; height: 4px"
-  ></v-divider>
-  <WeddingGreeting />
-  <WeddingHallMap />
+  <div class="d-flex flex-column w-100 h-100 ga-10">
+    <WeddingTitle />
+    <WeddingGreeting />
+    <WeddingInformation />
+
+    <WeddingHallMap />
+  </div>
 </template>
 
 <style lang="scss" scoped>
