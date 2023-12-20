@@ -12,17 +12,14 @@
             cover
             alt="test"
             height="100%"
-            @click="handleImageClick(imgIdx)"
           ></v-img>
         </v-col>
       </template>
     </v-row>
   </div>
-  <ImagePopup selectedImage="imageNo" opened="imagePopupOpened" />
 </template>
 
 <script setup>
-import ImagePopup from '@/components/util/ImagePopup.vue'
 import { ref } from 'vue'
 
 const imageLayout = [{ cols: 12 }, { cols: 6 }, { cols: 6 }, { cols: 12 }, { cols: 6 }, { cols: 6 }]
