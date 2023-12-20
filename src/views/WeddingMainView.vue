@@ -5,6 +5,7 @@ import WeddingGreeting from '@/components/WeddingGreeting.vue'
 import WeddingHallMap from '@/components/WeddingHallMap.vue'
 import WeddingPersonaInfo from '@/components/WeddingPersonaInfo.vue'
 import WeddingAdditional from '@/components/WeddingAdditional.vue'
+import WeddingPhoto from '@/components/WeddingPhoto.vue'
 </script>
 
 <template>
@@ -12,9 +13,8 @@ import WeddingAdditional from '@/components/WeddingAdditional.vue'
     <WeddingTitle />
     <WeddingGreeting />
     <WeddingPersonaInfo />
-
     <WeddingInformation />
-
+    <WeddingPhoto />
     <WeddingHallMap />
     <WeddingAdditional />
   </div>

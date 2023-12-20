@@ -178,7 +178,7 @@ const zoomOut = () => {
 
 .custom_zoomcontrol {
   position: absolute;
-  top: 50px;
+  top: 10px;
   right: 10px;
   width: 36px;
   height: 80px;
