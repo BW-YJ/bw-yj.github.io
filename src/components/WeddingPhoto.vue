@@ -10,43 +10,30 @@
           <v-img
             :src="`https://bw-yj.github.io/images/photo${imgIdx}.png`"
             cover
+            alt="test"
             height="100%"
+            @click="handleImageClick(imgIdx)"
           ></v-img>
-        </v-col>
-
-        <v-col v-if="image.children" cols="6" class="d-flex flex-column">
-          <v-row>
-            <v-col
-              v-for="(children, childIdx) in image.children"
-              :key="childIdx"
-              :cols="children.cols"
-            >
-              <v-img
-                :src="`https://bw-yj.github.io/images/photo${imgIdx + children.cols}.png`"
-                cover
-                height="100%"
-              ></v-img>
-            </v-col>
-          </v-row>
         </v-col>
       </template>
     </v-row>
   </div>
+  <ImagePopup selectedImage="imageNo" opened="imagePopupOpened" />
 </template>
 
 <script setup>
-const imageLayout = [
-  { cols: 6 },
-  {
-    cols: 6,
-    children: [{ cols: 12 }, { cols: 12 }]
-  },
-  { cols: 6 },
-  { cols: 3 },
-  { cols: 9 },
-  { cols: 6 },
-  { cols: 6 }
-]
+import ImagePopup from '@/components/util/ImagePopup.vue'
+import { ref } from 'vue'
+
+const imageLayout = [{ cols: 12 }, { cols: 6 }, { cols: 6 }, { cols: 12 }, { cols: 6 }, { cols: 6 }]
+const imageNo = ref('')
+const imagePopupOpened = ref(false)
+
+const handleImageClick = (img) => {
+  console.log('tt')
+  imageNo.value = img
+  imagePopupOpened.value = true
+}
 </script>
 
 <style lang="scss" scoped>
