@@ -11,5 +11,5 @@ export const WEDDING = {
   BROOM_FATHER: '김양빈',
   BROOM_MOTHER: '박정희',
   BRIDE_FATHER: '오명석',
-  BRIDE_MOTHER: '정영희'
+  BRIDE_MOTHER: '전영희'
 }
