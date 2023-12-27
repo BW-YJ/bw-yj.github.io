@@ -2,8 +2,8 @@ import { ref, watch } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useimagePopupStore = defineStore('imagePopup', () => {
-  const selectedImage = ref<string>('1')
-  const isPopupOpened = ref<boolean>(true)
+  const selectedImage = ref<string>('0')
+  const isPopupOpened = ref<boolean>(false)
 
   const setImageNo = (number: string) => {
     selectedImage.value = number
