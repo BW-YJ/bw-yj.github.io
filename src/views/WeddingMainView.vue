@@ -22,7 +22,4 @@ import WeddingPhoto from '@/components/WeddingPhoto.vue'
 
 <style lang="scss" scoped>
 @import '/src/styles/common.scss';
-.my-divider {
-  margin: 20px 0; /* 필요에 따라 여백 설정 */
-}
 </style>

@@ -12,6 +12,7 @@
             cover
             alt="test"
             height="100%"
+            @click="handleImageClick(imgIdx)"
           ></v-img>
         </v-col>
       </template>
@@ -20,16 +21,14 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { useimagePopupStore } from '@/stores/imagePopup'
+const { handleImagePopupOpened, setImageNo } = useimagePopupStore()
 
 const imageLayout = [{ cols: 12 }, { cols: 6 }, { cols: 6 }, { cols: 12 }, { cols: 6 }, { cols: 6 }]
-const imageNo = ref('')
-const imagePopupOpened = ref(false)
 
 const handleImageClick = (img) => {
-  console.log('tt')
-  imageNo.value = img
-  imagePopupOpened.value = true
+  setImageNo(img)
+  handleImagePopupOpened(true)
 }
 </script>
 

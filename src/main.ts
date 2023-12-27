@@ -7,13 +7,16 @@ import 'aos/dist/aos.css'
 import { loadFonts } from './plugins/webfontloader'
 import VCalendar from 'v-calendar'
 import 'v-calendar/style.css'
+import { createPinia } from 'pinia'
 
+const pinia = createPinia()
 loadFonts()
 
 createApp(App)
   .use(router)
   .use(vuetify)
   .use(VCalendar, {})
+  .use(pinia)
   .mixin({
     created() {
       AOS.init()
