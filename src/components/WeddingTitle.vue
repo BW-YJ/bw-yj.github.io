@@ -8,14 +8,13 @@
       <div class="d-flex sub-title font-weight-black">WE ARE GETTING MARRIED</div>
       <!--      <div class="d-flex text-h6 font-easta-heavy font-italic">저희 결혼합니다</div>-->
     </div>
-    <div class="">
-      <div class="pa-15 mobile-100-w-50">
-        <img
-          src="https://bw-yj.github.io/images/IMG_2460.png"
-          alt="Polaroid Image"
-          class="polaroid-image"
-        />
-      </div>
+
+    <div class="pa-15 mobile-100-w-50">
+      <img
+        src="https://bw-yj.github.io/images/IMG_2460.png"
+        alt="Polaroid Image"
+        class="polaroid-image"
+      />
     </div>
   </div>
 </template>

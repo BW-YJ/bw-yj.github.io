@@ -2,7 +2,7 @@
   <div
     data-aos="fade-up"
     data-aos-duration="1500"
-    class="d-flex flex-row w-100 align-center font-easta-heavy pa-10 ga-10 h-200px"
+    class="d-flex flex-row w-100 align-center justify-center font-easta-heavy pa-10 ga-10 h-200px"
   >
     <div class="d-flex flex-row align-center ga-2 personal-info">
       <div class="d-flex flex-column align-center justify-end">
