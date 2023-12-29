@@ -1,5 +1,27 @@
 <template>
-  <div class="d-flex flex-column w-100 font-easta-heavy">
+  <div class="d-flex flex-column w-100 font-easta-heavy align-center ga-10 ">
+    <div class="d-flex flex-row justify-center">
+      <v-btn block variant="outlined" rounded="xl" size="medium" min-width="300" class="pb-2 pt-2"
+             @click="dialog = true">
+        마음 전하실 곳
+      </v-btn>
+
+      <v-dialog
+          v-model="dialog"
+          width="auto"
+      >
+        <v-card>
+          <v-card-text>
+            김병우 : 카카오뱅크 3333-01-2960005
+          </v-card-text>
+          <v-card-actions>
+            <v-btn color="primary" block @click="dialog = false">확인</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
+
+    </div>
+
     <v-banner
         class="banner"
         lines="one"
@@ -22,8 +44,9 @@
 </template>
 
 <script setup>
-const moveToPresent = () => {
-}
+import {ref} from "vue";
+
+const dialog = ref(false)
 </script>
 
 <style lang="scss" scoped>
