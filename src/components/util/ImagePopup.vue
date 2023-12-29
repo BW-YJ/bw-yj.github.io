@@ -2,14 +2,21 @@
   <div v-if="isPopupOpened">
     <transition name="modal" appear>
       <section class="modal">
-        <div class="modal__overlay" @click.self="handleImagePopupOpened(false)"></div>
-        <div class="modal__window">
-          <v-img
-            :src="`https://bw-yj.github.io/images/photo${selectedImage}.png`"
-            cover
-            alt="test"
-            height="100%"
-          ></v-img>
+        <div class="modal__overlay"></div>
+        <div class=" modal__wrapper d-flex flex-column ">
+          <div class="d-flex flex-row-reverse">
+            <v-btn icon density="compact" @click="handleImagePopupOpened(false)" class="close-button">
+              <v-icon icon="mdi-close" size="small"></v-icon>
+            </v-btn>
+          </div>
+          <div class="modal__window  justify-center align-center align-self-center">
+            <v-img
+                :src="`https://bw-yj.github.io/images/photo${selectedImage}.png`"
+                cover
+                alt="not loaded"
+                height="100%"
+            ></v-img>
+          </div>
         </div>
       </section>
     </transition>
@@ -17,26 +24,20 @@
 </template>
 
 <script setup>
-import { useimagePopupStore } from '@/stores/imagePopup'
-import { storeToRefs } from 'pinia'
-import { watch } from 'vue'
+import {useimagePopupStore} from '@/stores/imagePopup'
+import {storeToRefs} from 'pinia'
 
-const { isPopupOpened, selectedImage } = storeToRefs(useimagePopupStore())
-const { handleImagePopupOpened } = useimagePopupStore()
+const {isPopupOpened, selectedImage} = storeToRefs(useimagePopupStore())
+const {handleImagePopupOpened} = useimagePopupStore()
 
-watch(selectedImage, () => {
-  console.log('test~~', selectedImage.value)
-})
-
-watch(isPopupOpened, () => {
-  console.log('test22~~', isPopupOpened.value)
-})
 </script>
 <style lang="scss" scoped>
 @import '/src/styles/common.scss';
+
 img {
   object-fit: cover;
 }
+
 .modal {
   position: fixed; /* 수정된 부분 */
   top: 0;
@@ -48,6 +49,12 @@ img {
   align-items: center;
   z-index: 999;
 
+  &__wrapper {
+    width: 90%;
+    border-radius: 0.4rem;
+    height: 85%;
+  }
+
   &__overlay {
     position: absolute;
     width: 100%;
@@ -57,8 +64,8 @@ img {
   }
 
   &__window {
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 
     border-radius: 0.4rem;
@@ -79,5 +86,12 @@ img {
   &-leave {
     transition: opacity 0.4s ease;
   }
+}
+
+.close-button {
+  position: absolute;
+  top: 5%;
+  right: 10px;
+  z-index: 1000; /* Ensure it's above other elements */
 }
 </style>
