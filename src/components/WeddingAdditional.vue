@@ -1,13 +1,13 @@
 <template>
   <div class="d-flex flex-column w-100 font-easta-heavy align-center ga-10">
-    <div class="d-flex flex-row justify-center">
+    <div class="d-flex flex-row justify-center w-80">
       <v-btn
         block
         variant="outlined"
         rounded="xl"
         size="medium"
         min-width="300"
-        class="pb-2 pt-2"
+        class="pb-3 pt-3"
         @click="handleAccountInfoPopupOpened(true)"
       >
         마음 전하실 곳

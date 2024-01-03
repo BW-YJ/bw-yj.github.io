@@ -8,7 +8,7 @@ import { loadFonts } from './plugins/webfontloader'
 import VCalendar from 'v-calendar'
 import 'v-calendar/style.css'
 import { createPinia } from 'pinia'
-
+import Clipboard from 'v-clipboard'
 const pinia = createPinia()
 loadFonts()
 
@@ -17,6 +17,7 @@ createApp(App)
   .use(vuetify)
   .use(VCalendar, {})
   .use(pinia)
+  .use(Clipboard)
   .mixin({
     created() {
       AOS.init()

@@ -57,6 +57,7 @@ img {
     width: 90%;
     border-radius: 0.4rem;
     height: 85%;
+    justify-content: center;
   }
 
   &__overlay {
