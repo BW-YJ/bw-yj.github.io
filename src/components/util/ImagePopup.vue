@@ -3,18 +3,23 @@
     <transition name="modal" appear>
       <section class="modal">
         <div class="modal__overlay"></div>
-        <div class=" modal__wrapper d-flex flex-column ">
+        <div class="modal__wrapper d-flex flex-column">
           <div class="d-flex flex-row-reverse">
-            <v-btn icon density="compact" @click="handleImagePopupOpened(false)" class="close-button">
+            <v-btn
+              icon
+              density="compact"
+              @click="handleImagePopupOpened(false)"
+              class="close-button"
+            >
               <v-icon icon="mdi-close" size="small"></v-icon>
             </v-btn>
           </div>
-          <div class="modal__window  justify-center align-center align-self-center">
+          <div class="modal__window justify-center align-center align-self-center">
             <v-img
-                :src="`https://bw-yj.github.io/images/photo${selectedImage}.png`"
-                cover
-                alt="not loaded"
-                height="100%"
+              :src="`https://bw-yj.github.io/images/photo${selectedImage}.png`"
+              cover
+              alt="not loaded"
+              height="100%"
             ></v-img>
           </div>
         </div>
@@ -24,12 +29,11 @@
 </template>
 
 <script setup>
-import {useimagePopupStore} from '@/stores/imagePopup'
-import {storeToRefs} from 'pinia'
+import { useimagePopupStore } from '@/stores/imagePopup'
+import { storeToRefs } from 'pinia'
 
-const {isPopupOpened, selectedImage} = storeToRefs(useimagePopupStore())
-const {handleImagePopupOpened} = useimagePopupStore()
-
+const { isPopupOpened, selectedImage } = storeToRefs(useimagePopupStore())
+const { handleImagePopupOpened } = useimagePopupStore()
 </script>
 <style lang="scss" scoped>
 @import '/src/styles/common.scss';
@@ -89,9 +93,9 @@ img {
 }
 
 .close-button {
-  position: absolute;
-  top: 5%;
-  right: 10px;
+  position: relative;
+  bottom: -10px;
+  right: -10px;
   z-index: 1000; /* Ensure it's above other elements */
 }
 </style>
