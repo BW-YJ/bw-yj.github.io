@@ -1,19 +1,17 @@
 <template>
-  <div
-    data-aos="fade-up"
-    data-aos-duration="1500"
-    class="d-flex flex-column w-100 font-easta-heavy pa-10"
-  >
+  <div class="d-flex flex-column w-100 font-easta-heavy pa-10">
     <v-row>
       <template v-for="(image, imgIdx) in imageLayout" :key="imgIdx">
         <v-col :cols="image.cols">
-          <v-img
-            :src="`https://bw-yj.github.io/images/photo${imgIdx}.png`"
-            cover
-            alt="test"
-            height="100%"
-            @click="handleImageClick(imgIdx)"
-          ></v-img>
+          <div data-aos="fade-up" data-aos-duration="2000">
+            <v-img
+              :src="`https://bw-yj.github.io/images/photo${imgIdx}.png`"
+              cover
+              alt="test"
+              height="100%"
+              @click="handleImageClick(imgIdx)"
+            ></v-img>
+          </div>
         </v-col>
       </template>
     </v-row>
@@ -24,7 +22,16 @@
 import { useimagePopupStore } from '@/stores/imagePopup'
 const { handleImagePopupOpened, setImageNo } = useimagePopupStore()
 
-const imageLayout = [{ cols: 12 }, { cols: 6 }, { cols: 6 }, { cols: 12 }, { cols: 6 }, { cols: 6 }, { cols: 6 }, { cols: 6 }]
+const imageLayout = [
+  { cols: 12 },
+  { cols: 6 },
+  { cols: 6 },
+  { cols: 12 },
+  { cols: 6 },
+  { cols: 6 },
+  { cols: 6 },
+  { cols: 6 }
+]
 
 const handleImageClick = (img) => {
   setImageNo(img)
