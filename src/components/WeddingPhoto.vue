@@ -24,7 +24,7 @@
 import { useimagePopupStore } from '@/stores/imagePopup'
 const { handleImagePopupOpened, setImageNo } = useimagePopupStore()
 
-const imageLayout = [{ cols: 12 }, { cols: 6 }, { cols: 6 }, { cols: 12 }, { cols: 6 }, { cols: 6 }]
+const imageLayout = [{ cols: 12 }, { cols: 6 }, { cols: 6 }, { cols: 12 }, { cols: 6 }, { cols: 6 }, { cols: 6 }, { cols: 6 }]
 
 const handleImageClick = (img) => {
   setImageNo(img)
