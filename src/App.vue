@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import WeddingMainView from '@/views/WeddingMainView.vue'
 import ImagePopup from '@/components/util/ImagePopup.vue'
+import AccountInfoPopup from '@/components/util/AccountInfoPopup.vue'
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import ImagePopup from '@/components/util/ImagePopup.vue'
     <body>
       <div class="main">
         <ImagePopup />
+        <AccountInfoPopup />
         <WeddingMainView />
       </div>
     </body>
