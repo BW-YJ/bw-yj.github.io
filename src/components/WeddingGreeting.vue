@@ -5,14 +5,14 @@
     class="d-flex flex-column align-center w-100 h-200px font-easta-heavy pa-10 h-500px"
   >
     <div>
-      <div class="sub-title font-esta-mid">초대합니다</div>
+      <div class="sub-title font-maruburi">초대합니다</div>
 
       <br />
-      <div class="greeting-content font-easta-mid">
-        함께하는 순간들이 소중한 저희가<br />
-        평생의 동반자로 새로운 시작을 약속하려 합니다.<br />
-        귀한 걸음 하시어 그 시작의 자리에 함께해 주시면<br />
-        더 없는 기쁨으로 간직하겠습니다.<br />
+      <div class="greeting-content font-maruburi">
+        봄바람에 새싹이 돋아나는 이 계절,<br />
+        사랑하는 한 쌍의 젊음이 인연을 맺고자 합니다.<br />
+        새 인생을 출발하는 두 사람을 가까이에서<br />
+        축복해 주시면 더없는 기쁨이 되겠습니다.<br />
       </div>
     </div>
   </div>

@@ -9,7 +9,7 @@ import '@/styles/font.scss'
   <v-app id="app">
     <header></header>
     <body>
-      <div class="main bg-color">
+      <div class="main bg-color font-maruburi">
         <ImagePopup />
         <AccountInfoPopup />
         <WeddingMainView />
@@ -21,6 +21,6 @@ import '@/styles/font.scss'
 <style lang="scss">
 body,
 #app {
-  font-family: 'bodoni', 'easta-mid';
+  font-family: 'bodoni', 'bodoni-itailic', 'maruburi', 'easta-mid';
 }
 </style>

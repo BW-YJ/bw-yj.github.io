@@ -1,21 +1,41 @@
 
 .font{
+  &-size-md{
+    font-size:  1.5rem;
+  }
+  &-size-sl{
+    font-size: 1.2rem;
+  }
+  &-size-x{
+    font-size: 1rem;
+  }
+
  &-easta-mid {
 
    font-family: 'easta-mid';
  }
   &-bodoni{
   font-family: 'bodoni';
-}}
+    &-itailic {
+      font-family: 'bodoni-itailic';
+    }
+}
+  &-maruburi{
+    font-family: 'maruburi';
 
-.bg-color{
-  background-color: #e2e0d8;
-
+  }
 
 }
 
+.bg-color{
+  background-color: #e2e0d8;
+}
+.one-page{
+  height : 100vh;
+}
+
 .mobile-100-w-50{
-  width : 50%;
+  width : 90%;
 }
 
 
@@ -66,9 +86,9 @@
   font-size: 60px;
 }
 .sub-title{
-
   font-size: 1.5rem;
 }
+
 .bg-gray{
 
   background-color: #fff;

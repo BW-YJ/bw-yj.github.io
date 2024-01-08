@@ -5,10 +5,10 @@
     class="d-flex justify-center flex-column align-center ga-5 pa-10 font-easta-heavy h-500px"
   >
     <div class="d-flex flex-column w-100 ga-3">
-      <div class="sub-title">오시는길</div>
+      <div class="sub-title font-maruburi">오시는길</div>
       <div class="d-flex flex-row ga-1">
         <v-divider vertical :thickness="2" class="border-opacity-50"></v-divider>
-        <div class="map-content">
+        <div class="map-content font-maruburi">
           JK아트컨벤션<br />
           서울 영등포구 문래로 164<br />
           02-2628-9100

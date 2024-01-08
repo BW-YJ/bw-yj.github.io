@@ -1,9 +1,5 @@
 <template>
-  <div
-    data-aos="fade-up"
-    data-aos-duration="1500"
-    class="d-flex flex-column w-100 font-easta-heavy pa-10"
-  >
+  <div data-aos="fade-up" data-aos-duration="1500" class="d-flex flex-column w-100 pa-10">
     <VCalendar expanded :attributes="attrs" class="vc-container" :step="0" hideArrows>
       <a slot="header-left-button" slot-scope="{ page }" @click="page.movePrevMonth()"> Prev </a>
       <a slot="header-right-button" slot-scope="{ page }" @click="page.moveNextMonth()"> Next </a>

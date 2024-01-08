@@ -2,18 +2,23 @@
   <div
     data-aos="fade-up"
     data-aos-duration="1500"
-    class="d-flex flex-column w-100 align-center justify-center"
+    class="d-flex flex-column w-100 align-center justify-center one-page pa-5 ga-5"
   >
-    <div class="d-flex flex-column w-100 align-center justify-center pt-10">
-      <p class="d-flex sub-title font-bodoni text-center">STORY<br />OF<br />OUR <br />WEDDING</p>
+    <div class="d-flex flex-column w-100 align-center justify-center">
+      <p class="d-flex sub-title font-bodoni text-center">STORY<br />OF<br />OUR WEDDING</p>
     </div>
 
-    <div class="d-flex flex-row pa-15 mobile-100-w-50 justify-center">
-      <img
-        src="https://bw-yj.github.io/images/main.gif"
-        alt="Polaroid Image"
-        class="polaroid-image"
-      />
+    <div class="d-flex flex-row justify-center">
+      <img src="https://bw-yj.github.io/images/main.gif" alt="Polaroid Image" class="w-100" />
+    </div>
+
+    <div class="d-flex flex-row w-100 align-center justify-end ga-3">
+      <p class="d-flex font-size-md font-bodoni text-center">BYEONGWOO</p>
+      <p class="d-flex font-size-md font-bodoni text-center">&</p>
+      <p class="d-flex font-size-md font-bodoni text-center">YEJIN</p>
+    </div>
+    <div class="d-flex flex-row w-100 align-center justify-end">
+      <p class="d-flex font-size-xs font-bodoni-itailic text-center">JK Art Convention</p>
     </div>
   </div>
 </template>
