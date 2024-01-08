@@ -1,13 +1,23 @@
 @font-face {
-  font-family: 'easta_mid';
-  src: url('./fonts/EASTARJET-Medium.ttf')
+  font-family: 'easta-mid';
+  src: url('./fonts/EASTARJET-Medium.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'easta_light';
-  src: url('./fonts/EASTARJET-DemiLight.ttf')
+  font-family: 'easta-light';
+  src: url('./fonts/EASTARJET-DemiLight.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'easta_heavy';
-  src: url('./fonts/EASTARJET-Heavy.ttf')
+  font-family: 'easta-heavy';
+  src: url('./fonts/EASTARJET-Heavy.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'bodoni';
+  font-weight: 500;
+  src: url('./fonts/BodoniModa-Italic-VariableFont_opsz,wght.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'bodoni-itailic';
+  src: url('./fonts/BodoniModa-Italic-VariableFont_opsz,wght.ttf') format('truetype');
 }

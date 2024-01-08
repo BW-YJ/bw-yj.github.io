@@ -9,7 +9,7 @@ import WeddingPhoto from '@/components/WeddingPhoto.vue'
 </script>
 
 <template>
-  <div class="d-flex flex-column w-100 h-100 ga-10">
+  <div class="d-flex flex-column w-100 h-100 ga-10 bg-color">
     <WeddingTitle />
     <WeddingGreeting />
     <WeddingPersonaInfo />

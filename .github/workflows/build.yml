@@ -3,7 +3,7 @@ name: Build and Deploy from [main] branch to [gh-pages] branch
 on:
   push:
     branches:
-      - main
+      - new-cx
 
 jobs:
   build:
