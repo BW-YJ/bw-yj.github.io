@@ -15,7 +15,7 @@ loadFonts()
 createApp(App)
   .use(router)
   .use(vuetify)
-  .use(VCalendar, {})
+  .use(VCalendar, { navVisibility: 'hidden' })
   .use(pinia)
   .use(Clipboard)
   .mixin({

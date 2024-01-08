@@ -1,8 +1,17 @@
 <template>
-  <div data-aos="fade-up" data-aos-duration="1500" class="d-flex flex-column w-100 pa-10">
-    <VCalendar expanded :attributes="attrs" class="vc-container" :step="0" hideArrows>
-      <a slot="header-left-button" slot-scope="{ page }" @click="page.movePrevMonth()"> Prev </a>
-      <a slot="header-right-button" slot-scope="{ page }" @click="page.moveNextMonth()"> Next </a>
+  <div
+    data-aos="fade-up"
+    data-aos-duration="1500"
+    class="d-flex flex-column w-100 pa-10 my-calendar"
+  >
+    <VCalendar
+      expanded
+      :attributes="attrs"
+      class="vc-container"
+      :step="0"
+      hideArrows
+      :show-nav="false"
+    >
     </VCalendar>
   </div>
 </template>
@@ -18,6 +27,7 @@ const attrs = ref([
       fillMode: 'light',
       contentClass: 'italic'
     },
+    showNavigation: false,
     dates: new Date(2024, 2, 9)
   }
 ])
@@ -26,10 +36,10 @@ const attrs = ref([
 <style lang="scss" scoped>
 @import '/src/styles/common.scss';
 
-.vc-container :deep(.vc-weekday-1) {
-  color: #638bf1;
+.my-calendar :deep(.vc-weekday-7) {
+  color: #6366f1;
 }
-.vc-container :deep(.vc-weekday-7) {
-  color: #f16363;
+.my-calendar :deep(.vc-weekday-1) {
+  color: #f16395;
 }
 </style>
