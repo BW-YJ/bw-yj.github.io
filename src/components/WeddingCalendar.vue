@@ -6,19 +6,29 @@
   >
     <VCalendar
       expanded
+      transparent
+      borderless
       :attributes="attrs"
       class="vc-container"
       :step="0"
       hideArrows
-      :show-nav="false"
+      showNav="false"
+      navVisibility="hover"
+      disable-page-swipe
     >
+      <template v-slot:header-title-wrapper></template>
+
+      <template v-slot:header-prev-button></template>
+      <template v-slot:header-next-button
+        ><button @click.prevent.stop="() => {}"></button>
+      </template>
     </VCalendar>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-
+const move = () => {}
 const attrs = ref([
   {
     key: 'wedding-day',

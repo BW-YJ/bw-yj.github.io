@@ -1,9 +1,9 @@
 <template>
-  <div class="d-flex flex-column">
+  <div class="d-flex flex-column ga-10">
     <div
       data-aos="fade-up"
       data-aos-duration="1500"
-      class="d-flex flex-row w-100 align-center justify-center ga-5 pr-10 pl-10"
+      class="d-flex flex-row w-100 align-center justify-center ga-10 pr-10 pl-10"
     >
       <div class="d-flex flex-column align-content-end justify-end info-date">
         <div class="info-date_year">{{ WEDDING.YEAR }}년</div>
@@ -18,7 +18,7 @@
     <div
       data-aos="fade-up"
       data-aos-duration="1500"
-      class="d-flex flex-row w-100 align-center justify-center ga-10"
+      class="d-flex flex-row w-100 align-center justify-center"
     >
       <WeddingCalendar />
     </div>
