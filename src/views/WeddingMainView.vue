@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import WeddingTitle from '@/components/WeddingTitle.vue'
-import WeddingInformation from '@/components/WeddingDayInfo.vue'
+import WeddingDayInfo from '@/components/WeddingDayInfo.vue'
 import WeddingGreeting from '@/components/WeddingGreeting.vue'
 import WeddingHallMap from '@/components/WeddingHallMap.vue'
 import WeddingPersonaInfo from '@/components/WeddingPersonaInfo.vue'
@@ -9,11 +9,11 @@ import WeddingPhoto from '@/components/WeddingPhoto.vue'
 </script>
 
 <template>
-  <div class="d-flex flex-column w-100 h-100 ga-10 bg-color">
+  <div class="d-flex flex-column w-100 h-100 ga-50vw bg-color">
     <WeddingTitle />
     <WeddingGreeting />
     <WeddingPersonaInfo />
-    <WeddingInformation />
+    <WeddingDayInfo />
     <WeddingPhoto />
     <WeddingHallMap />
     <WeddingAdditional />

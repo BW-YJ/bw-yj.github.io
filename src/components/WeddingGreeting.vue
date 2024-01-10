@@ -1,9 +1,5 @@
 <template>
-  <div
-    data-aos="fade-up"
-    data-aos-duration="1500"
-    class="d-flex flex-column align-center w-100 h-200px font-easta-heavy h-500px"
-  >
+  <div data-aos="fade-up" data-aos-duration="1500" class="d-flex flex-column align-center w-100">
     <div>
       <div class="sub-title font-maruburi">초대합니다</div>
 

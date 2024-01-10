@@ -81,7 +81,7 @@ const placesSearchCB = (data, status) => {
 
 const displayMarker = (place) => {
   weddingPosition.value = place
-  var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_red.png',
+  var imageSrc = 'https://bw-yj.github.io/images/marker_taepoong.png',
     imageSize = new window.kakao.maps.Size(32, 34.5),
     imageOption = { offset: new window.kakao.maps.Point(13.5, 34) }
 
@@ -122,7 +122,7 @@ const displayMarker = (place) => {
       customLinkElement.style.fontSize = '10px'
       customLinkElement.style.fontWeight = 'bold'
       customLinkElement.style.overflow = 'hidden'
-      customLinkElement.style.background = '#d95050'
+      customLinkElement.style.background = '#c5b686'
       customLinkElement.style.backgroundImage =
         'url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png)'
       customLinkElement.style.backgroundPosition = 'right 3px center'
