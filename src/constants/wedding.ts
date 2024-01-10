@@ -22,7 +22,7 @@ export const ACCOUNT_INFO_BROOM = [
     ACCOUNT_NUMBER: '031-975-1800'
   },
   {
-    ROLE: '신랑 아머니',
+    ROLE: '신랑 어머니',
     OWNER: '박정희',
     ACCOUNT_BANK: '신한',
     ACCOUNT_NUMBER: '110-221-279644'
