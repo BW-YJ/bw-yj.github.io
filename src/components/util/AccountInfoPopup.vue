@@ -2,7 +2,7 @@
   <div v-if="isPopupOpened">
     <transition name="modal" appear>
       <section class="modal">
-        <div class="modal__overlay"></div>
+        <div class="modal__overlay" @click="handleAccountInfoPopupOpened(false)"></div>
         <div class="modal__wrapper d-flex flex-column">
           <div class="d-flex flex-row-reverse">
             <v-btn
@@ -15,7 +15,7 @@
             </v-btn>
           </div>
           <div class="modal__window justify-center align-center align-self-center pt-10 pb-10">
-            <div class="d-flex">신랑측</div>
+            <div class="d-flex pl-3">신랑측</div>
             <v-list lines="two">
               <v-list-item v-for="accountInfo in ACCOUNT_INFO_BROOM" :key="accountInfo">
                 <v-list-item-content class="d-flex flex-row justify-space-between align-center">
@@ -39,12 +39,12 @@
               </v-list-item>
             </v-list>
             <v-divider class="pa-2" thickness="2" />
-            <div class="d-flex">신부측</div>
+            <div class="d-flex pl-3">신부측</div>
             <v-list lines="two">
               <v-list-item v-for="accountInfo in ACCOUNT_INFO_BRIDE" :key="accountInfo">
                 <v-list-item-content class="d-flex flex-row justify-space-between align-center">
                   <div class="d-flex flex-column account-text">
-                    <v-list-item-title class="flex-grow-1 account-text" :title="accountInfo.OWNER">
+                    <v-list-item-title class="flex-grow-1 account-text">
                       {{ accountInfo.OWNER + '(' + accountInfo.ROLE + ')' }}
                     </v-list-item-title>
 
@@ -120,7 +120,7 @@ img {
 
   &__window {
     width: 100%;
-    height: 100%;
+    height: 80%;
     border-radius: 0.9rem;
 
     padding: 1rem;
