@@ -5,9 +5,9 @@
       data-aos-duration="1500"
       class="d-flex flex-row w-100 align-center justify-center ga-5 pa-10 h-200px"
     >
-      <div class="d-flex flex-column align-center justify-end info-date">
+      <div class="d-flex flex-column align-content-end justify-end info-date">
         <div class="info-date_year">{{ WEDDING.YEAR }}년</div>
-        <div>{{ WEDDING.MONTH }}월<br />{{ WEDDING.DATE }}일</div>
+        <div class="info-date-text">{{ WEDDING.MONTH }}월<br />{{ WEDDING.DATE }}일</div>
       </div>
       <v-divider vertical :thickness="1" class="border-opacity-50"></v-divider>
       <div class="d-flex flex-column align-baseline justify-end info-place">
@@ -40,9 +40,19 @@ import WeddingCalendar from '@/components/WeddingCalendar.vue'
 }
 
 .info-date {
+  position: relative;
   font-size: 2rem;
-  line-height: 30px;
+  line-height: 32px;
+  text-align: right;
   vertical-align: bottom;
+
+  &-text {
+    position: relative;
+    vertical-align: bottom;
+    right: -2px;
+    font-size: 1.8rem;
+    text-align: right;
+  }
 }
 
 .info-place {
