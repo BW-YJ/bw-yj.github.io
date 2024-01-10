@@ -30,6 +30,7 @@
                   <v-btn
                     variant="plain"
                     v-clipboard="accountInfo.ACCOUNT_BANK + ' ' + accountInfo.ACCOUNT_NUMBER"
+                    @click="snackbar = true"
                   >
                     <v-icon small>mdi-content-copy</v-icon>
                   </v-btn>
@@ -42,15 +43,22 @@
       </section>
     </transition>
   </div>
+  <v-snackbar v-model="snackbar" :timeout="timeout" rounded="pill" color="blue-grey">
+    <div class="d-flex justify-center">{{ text }}</div>
+  </v-snackbar>
 </template>
 
 <script setup>
 import { storeToRefs } from 'pinia'
 import { useAccountInfoPopupStore } from '@/stores/accountInfoPopup'
 import { ACCOUNT_INFO } from '@/constants/wedding'
-
+import { ref } from 'vue'
 const { isPopupOpened } = storeToRefs(useAccountInfoPopupStore())
 const { handleAccountInfoPopupOpened } = useAccountInfoPopupStore()
+
+const snackbar = ref(false)
+const timeout = 1000
+const text = '복사되었습니다.'
 </script>
 <style lang="scss" scoped>
 @import '/src/styles/common.scss';
