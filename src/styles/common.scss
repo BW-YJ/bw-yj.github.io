@@ -94,7 +94,13 @@
 .sub-title{
   font-size: 1.5rem;
 }
-
+.account-text{
+  font-size: 12px;
+  &-number{
+    font-size: 12px;
+    font-family: maruburi;
+  }
+}
 .bg-gray{
 
   background-color: #fff;

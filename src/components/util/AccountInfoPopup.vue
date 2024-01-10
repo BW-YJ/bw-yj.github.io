@@ -14,16 +14,17 @@
               <v-icon icon="mdi-close" size="small"></v-icon>
             </v-btn>
           </div>
-          <div class="modal__window justify-center align-center align-self-center">
+          <div class="modal__window justify-center align-center align-self-center pt-10 pb-10">
+            <div class="d-flex">신랑측</div>
             <v-list lines="two">
-              <v-list-item v-for="accountInfo in ACCOUNT_INFO" :key="accountInfo">
+              <v-list-item v-for="accountInfo in ACCOUNT_INFO_BROOM" :key="accountInfo">
                 <v-list-item-content class="d-flex flex-row justify-space-between align-center">
                   <div class="d-flex flex-column">
-                    <v-list-item-title class="flex-grow-1" :title="accountInfo.OWNER">
+                    <v-list-item-title class="flex-grow-1 account-text" :title="accountInfo.OWNER">
                       {{ accountInfo.OWNER + '(' + accountInfo.ROLE + ')' }}
                     </v-list-item-title>
 
-                    <v-list-item-subtitle>
+                    <v-list-item-subtitle class="account-text-number">
                       {{ accountInfo.ACCOUNT_BANK + ' ' + accountInfo.ACCOUNT_NUMBER }}
                     </v-list-item-subtitle>
                   </div>
@@ -35,7 +36,31 @@
                     <v-icon small>mdi-content-copy</v-icon>
                   </v-btn>
                 </v-list-item-content>
-                <v-divider class="mt-2" />
+              </v-list-item>
+            </v-list>
+            <v-divider class="pa-2" thickness="2" />
+            <div class="d-flex">신부측</div>
+            <v-list lines="two">
+              <v-list-item v-for="accountInfo in ACCOUNT_INFO_BRIDE" :key="accountInfo">
+                <v-list-item-content class="d-flex flex-row justify-space-between align-center">
+                  <div class="d-flex flex-column account-text">
+                    <v-list-item-title class="flex-grow-1 account-text" :title="accountInfo.OWNER">
+                      {{ accountInfo.OWNER + '(' + accountInfo.ROLE + ')' }}
+                    </v-list-item-title>
+
+                    <v-list-item-subtitle class="account-text-number">
+                      {{ accountInfo.ACCOUNT_BANK + ' ' + accountInfo.ACCOUNT_NUMBER }}
+                    </v-list-item-subtitle>
+                  </div>
+                  <v-btn
+                    variant="plain"
+                    v-clipboard="accountInfo.ACCOUNT_BANK + ' ' + accountInfo.ACCOUNT_NUMBER"
+                    @click="snackbar = true"
+                  >
+                    <v-icon small>mdi-content-copy</v-icon>
+                  </v-btn>
+                </v-list-item-content>
+                <!--                <v-divider class="mt-2" />-->
               </v-list-item>
             </v-list>
           </div>
@@ -51,7 +76,7 @@
 <script setup>
 import { storeToRefs } from 'pinia'
 import { useAccountInfoPopupStore } from '@/stores/accountInfoPopup'
-import { ACCOUNT_INFO } from '@/constants/wedding'
+import { ACCOUNT_INFO_BRIDE, ACCOUNT_INFO_BROOM } from '@/constants/wedding'
 import { ref } from 'vue'
 const { isPopupOpened } = storeToRefs(useAccountInfoPopupStore())
 const { handleAccountInfoPopupOpened } = useAccountInfoPopupStore()
@@ -81,7 +106,7 @@ img {
   &__wrapper {
     width: 90%;
     border-radius: 0.4rem;
-    height: 50%;
+
     justify-content: center;
   }
 
@@ -95,11 +120,9 @@ img {
 
   &__window {
     width: 100%;
-    max-height: 90%;
-    object-fit: cover;
+    height: 100%;
+    border-radius: 0.9rem;
 
-    border-radius: 0.4rem;
-    overflow: hidden;
     padding: 1rem;
     z-index: 999;
 
