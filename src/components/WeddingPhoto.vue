@@ -4,7 +4,7 @@
     <v-row>
       <template v-for="(image, imgIdx) in imageLayout" :key="imgIdx">
         <v-col :cols="image.cols">
-          <div data-aos="fade-up" data-aos-duration="2000">
+          <div>
             <v-img
               :src="`https://bw-yj.github.io/images/photo${imgIdx}.png`"
               cover
