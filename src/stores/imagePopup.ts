@@ -12,13 +12,6 @@ export const useimagePopupStore = defineStore('imagePopup', () => {
   const handleImagePopupOpened = (open: boolean) => {
     isPopupOpened.value = open
   }
-  watch(selectedImage, () => {
-    console.log('test', selectedImage.value)
-  })
-
-  watch(isPopupOpened, () => {
-    console.log('test22', isPopupOpened.value)
-  })
 
   return { isPopupOpened, selectedImage, handleImagePopupOpened, setImageNo }
 })

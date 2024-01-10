@@ -2,7 +2,7 @@
   <div
     data-aos="fade-up"
     data-aos-duration="1500"
-    class="d-flex flex-column w-100 pa-10 my-calendar"
+    class="d-flex flex-column w-100 pl-10 pr-10 my-calendar"
   >
     <VCalendar
       expanded

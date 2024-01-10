@@ -16,10 +16,10 @@
           </div>
           <div class="modal__window justify-center align-center align-self-center">
             <v-img
+              class="img"
               :src="`https://bw-yj.github.io/images/photo${selectedImage}.png`"
               cover
               alt="not loaded"
-              height="100%"
             ></v-img>
           </div>
         </div>
@@ -38,8 +38,8 @@ const { handleImagePopupOpened } = useimagePopupStore()
 <style lang="scss" scoped>
 @import '/src/styles/common.scss';
 
-img {
-  object-fit: cover;
+.img {
+  width: 100%;
 }
 
 .modal {
@@ -70,7 +70,7 @@ img {
 
   &__window {
     width: 100%;
-    height: 100%;
+
     object-fit: cover;
 
     border-radius: 0.4rem;
