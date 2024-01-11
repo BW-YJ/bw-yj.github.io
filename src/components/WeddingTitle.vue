@@ -12,12 +12,13 @@
       <img src="https://bw-yj.github.io/images/main.gif" alt="Polaroid Image" class="w-100" />
     </div>
 
-    <div class="d-flex flex-row w-100 align-center justify-end ga-3">
+    <div class="d-flex flex-row w-100 align-center justify-center ga-3">
       <p class="d-flex font-size-md font-bodoni text-center">BYEONGWOO</p>
       <p class="d-flex font-size-md font-bodoni text-center">&</p>
       <p class="d-flex font-size-md font-bodoni text-center">YEJIN</p>
     </div>
-    <div class="d-flex flex-row w-100 align-center justify-end">
+    <div class="d-flex flex-column w-100 align-center justify-center">
+      <p class="d-flex font-size-xs font-bodoni-itailic text-center">2024. 03. 09</p>
       <p class="d-flex font-size-xs font-bodoni-itailic text-center">JK Art Convention</p>
     </div>
   </div>

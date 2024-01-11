@@ -1,7 +1,12 @@
 <template>
-  <div data-aos="fade-up" data-aos-duration="2000" class="d-flex flex-column w-100 pa-10">
-    <div class="sub-title">우리의 기록</div>
-    <v-row>
+  <div
+    data-aos="fade-up"
+    data-aos-duration="2000"
+    class="d-flex flex-column w-100 pa-10 align-center"
+  >
+    <div class="d-flex flex-column sub-title font-bodoni pb-5">Gallery</div>
+    <v-divider :thickness="1" class="w-100"></v-divider>
+    <v-row class="w-100">
       <template v-for="(image, imgIdx) in imageLayout" :key="imgIdx">
         <v-col :cols="image.cols">
           <div>
