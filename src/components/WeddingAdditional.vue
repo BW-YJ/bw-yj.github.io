@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex flex-column w-100 align-center ga-10">
-    <div class="d-flex flex-row justify-center w-80 pb-10">
+    <div class="d-flex flex-row justify-center align-center w-80 pb-10">
       <v-btn
         block
         variant="outlined"

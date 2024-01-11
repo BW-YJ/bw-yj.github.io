@@ -16,6 +16,8 @@ import WeddingPhoto from '@/components/WeddingPhoto.vue'
     <WeddingDayInfo />
     <WeddingPhoto />
     <WeddingHallMap />
+  </div>
+  <div class="d-flex flex-column w-100 bg-color pt-10 pb-5">
     <WeddingAdditional />
   </div>
 </template>

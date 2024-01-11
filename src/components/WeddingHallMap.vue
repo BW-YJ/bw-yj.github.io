@@ -4,18 +4,12 @@
     data-aos-duration="1500"
     class="d-flex justify-center flex-column align-center ga-5 pa-10 font-easta-heavy h-500px"
   >
-    <div class="d-flex flex-column w-100 ga-3">
-      <div class="sub-title font-maruburi">오시는길</div>
-      <div class="d-flex flex-row ga-1">
-        <v-divider vertical :thickness="2" class="border-opacity-50"></v-divider>
-        <div class="map-content font-maruburi">
-          JK아트컨벤션<br />
-          서울 영등포구 문래로 164<br />
-          02-2628-9100
-        </div>
-      </div>
+    <div class="d-flex flex-column w-100 ga-3 align-center">
+      <div class="sub-title font-bodoni">Wedding Hall</div>
+      <v-divider :thickness="1" class="w-100"></v-divider>
     </div>
-    <div class="map_wrap">
+
+    <div class="map_wrap pa-1">
       <div id="map" class="mobile-map"></div>
       <div class="custom_zoomcontrol radius_border">
         <span :onClick="zoomIn"
@@ -28,6 +22,14 @@
             src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png"
             alt="축소"
         /></span>
+      </div>
+    </div>
+    <div class="d-flex flex-row ga-2 align-self-start">
+      <v-divider vertical :thickness="2" class="pl-2 border-opacity-50"></v-divider>
+      <div class="map-content font-maruburi">
+        JK아트컨벤션<br />
+        서울 영등포구 문래로 164<br />
+        02-2628-9100
       </div>
     </div>
   </div>
@@ -94,7 +96,6 @@ const displayMarker = (place) => {
   })
   marker.setMap(map)
 
-  //TODO : 마커 정리하기
   var overayContent =
     '<div ref="customOverlay" class="customoverlay">' +
     '  <a href="https://map.naver.com/p/entry/place/1897374821?c=15.00,0,0,0,dh" target="_blank">' +
@@ -164,11 +165,8 @@ const zoomOut = () => {
 
 .map_wrap {
   position: relative;
-  overflow: hidden;
-  border: 1px solid #919191;
-  border-radius: 5px;
+
   width: 100%;
-  height: 350px;
 }
 
 .radius_border {
