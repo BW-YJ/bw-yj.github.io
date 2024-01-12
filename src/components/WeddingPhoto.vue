@@ -15,7 +15,7 @@
               cover
               alt="test"
               height="100%"
-              @click="handleImageClick(imgIdx)"
+              @click="handleImageClick(imgIdx - 1)"
             ></v-img>
           </div>
         </v-col>

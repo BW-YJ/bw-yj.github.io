@@ -15,7 +15,7 @@
             </v-btn>
           </div>
           <div class="d-flex flex-column justify-space-around modal__window">
-            <div class="d-flex main_wrapper align-center">
+            <div class="d-flex main_wrapper align-center pb-3">
               <Carousel
                 id="gallery"
                 :items-to-show="1"
@@ -36,9 +36,8 @@
                 </template>
               </Carousel>
             </div>
-
             <div class="thumbnail__wrapper">
-              <v-divider thickness="1" class="pa-3" />
+              <v-divider thickness="1" class="d-flex pb-3 w-100 h-2px" />
               <Carousel
                 id="thumbnails"
                 :items-to-show="4"
@@ -106,6 +105,7 @@ const slideTo = (val) => {
   width: 90%;
   height: 90%;
   object-fit: cover;
+  align-content: center;
 }
 
 .modal {
