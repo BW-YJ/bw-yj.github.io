@@ -14,13 +14,53 @@
               <v-icon icon="mdi-close" size="small"></v-icon>
             </v-btn>
           </div>
-          <div class="modal__window justify-center align-center align-self-center">
-            <v-img
-              class="img"
-              :src="`https://bw-yj.github.io/images/photo${selectedImage}.png`"
-              cover
-              alt="not loaded"
-            ></v-img>
+          <div class="d-flex flex-column justify-space-around modal__window">
+            <div class="d-flex main_wrapper align-center">
+              <Carousel
+                id="gallery"
+                :items-to-show="1"
+                :wrap-around="true"
+                v-model="currentSlide"
+                class="main_wrapper"
+              >
+                <Slide v-for="slide in 7" :key="slide">
+                  <div class="d-flex flex-row carousel__item mainImg">
+                    <v-img
+                      :src="`https://bw-yj.github.io/images/photo${slide}.png`"
+                      alt="not loaded"
+                    ></v-img>
+                  </div>
+                </Slide>
+                <template #addons>
+                  <Navigation />
+                </template>
+              </Carousel>
+            </div>
+
+            <div class="thumbnail__wrapper">
+              <v-divider thickness="1" class="pa-3" />
+              <Carousel
+                id="thumbnails"
+                :items-to-show="4"
+                :wrap-around="true"
+                v-model="currentSlide"
+                ref="carousel"
+              >
+                <Slide v-for="slide in 7" :key="slide">
+                  <div
+                    class="carousel__item thumbnail justify-center align-center"
+                    @click="slideTo(slide - 1)"
+                  >
+                    <v-img
+                      class="thumbnail"
+                      :src="`https://bw-yj.github.io/images/photo${slide}.png`"
+                      cover
+                      alt="not loaded"
+                    ></v-img>
+                  </div>
+                </Slide>
+              </Carousel>
+            </div>
           </div>
         </div>
       </section>
@@ -31,15 +71,41 @@
 <script setup>
 import { useimagePopupStore } from '@/stores/imagePopup'
 import { storeToRefs } from 'pinia'
+import { Carousel, Navigation, Slide } from 'vue3-carousel'
+import 'vue3-carousel/dist/carousel.css'
+import { ref } from 'vue'
 
 const { isPopupOpened, selectedImage } = storeToRefs(useimagePopupStore())
 const { handleImagePopupOpened } = useimagePopupStore()
+const currentSlide = ref(selectedImage)
+
+const slideTo = (val) => {
+  currentSlide.value = val
+}
 </script>
 <style lang="scss" scoped>
 @import '/src/styles/common.scss';
-
-.img {
+.main_wrapper {
+  align-content: center;
   width: 100%;
+  height: 100%;
+  overflow: hidden;
+  object-fit: cover;
+}
+.thumbnail__wrapper {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+}
+.mainImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.thumbnail {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
 }
 
 .modal {
@@ -70,9 +136,7 @@ const { handleImagePopupOpened } = useimagePopupStore()
 
   &__window {
     width: 100%;
-
-    object-fit: cover;
-
+    height: 95%;
     border-radius: 0.4rem;
     overflow: hidden;
     padding: 1rem;
