@@ -23,7 +23,7 @@
                 v-model="currentSlide"
                 class="main_wrapper"
               >
-                <Slide v-for="slide in 7" :key="slide">
+                <Slide v-for="slide in 17" :key="slide">
                   <div class="d-flex flex-row carousel__item mainImg">
                     <v-img
                       :src="`https://bw-yj.github.io/images/photo${slide}.png`"
@@ -45,7 +45,7 @@
                 v-model="currentSlide"
                 ref="carousel"
               >
-                <Slide v-for="slide in 7" :key="slide">
+                <Slide v-for="slide in 17" :key="slide">
                   <div
                     class="carousel__item thumbnail justify-center align-center"
                     @click="slideTo(slide - 1)"
