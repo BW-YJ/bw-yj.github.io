@@ -54,7 +54,7 @@ import DdayCounter from '@/components/util/DdayCounter.vue'
 .overlay {
   position: fixed;
 
-  border-top: 1px solid #919191ff;
+  border-top: 0.5px solid #cacaca;
   bottom: 0;
   right: 0;
   width: 100%;
