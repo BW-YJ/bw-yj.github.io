@@ -39,7 +39,7 @@
               </v-list-item>
             </v-list>
             <v-divider :thickness="1" class="w-100"></v-divider>
-            <div class="d-flex pl-3">신부측</div>
+            <div class="d-flex pl-3 pt-3">신부측</div>
             <v-list lines="two">
               <v-list-item v-for="accountInfo in ACCOUNT_INFO_BRIDE" :key="accountInfo">
                 <v-list-item-content class="d-flex flex-row justify-space-between align-center">

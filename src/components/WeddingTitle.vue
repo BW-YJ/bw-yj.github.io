@@ -18,7 +18,7 @@
       <p class="d-flex font-size-md font-bodoni text-center">YEJIN</p>
     </div>
     <div class="d-flex flex-column w-100 align-center justify-center">
-      <p class="d-flex font-size-xs font-bodoni-itailic text-center">2024. 03. 09</p>
+      <p class="d-flex font-size-xs font-bodoni-itailic text-center">2024. 03. 09 17:30</p>
       <p class="d-flex font-size-xs font-bodoni-itailic text-center">JK Art Convention</p>
     </div>
   </div>

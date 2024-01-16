@@ -6,6 +6,7 @@ import WeddingHallMap from '@/components/WeddingHallMap.vue'
 import WeddingPersonaInfo from '@/components/WeddingPersonaInfo.vue'
 import WeddingAdditional from '@/components/WeddingAdditional.vue'
 import WeddingPhoto from '@/components/WeddingPhoto.vue'
+import WeddingDDay from '@/components/WeddingDDay.vue'
 </script>
 
 <template>
@@ -20,6 +21,7 @@ import WeddingPhoto from '@/components/WeddingPhoto.vue'
   <div class="d-flex flex-column w-100 bg-color pt-10 pb-5">
     <WeddingAdditional />
   </div>
+  <WeddingDDay></WeddingDDay>
 </template>
 
 <style lang="scss" scoped>

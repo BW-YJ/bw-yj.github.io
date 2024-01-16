@@ -9,19 +9,12 @@
         <div class="info-date_year">{{ WEDDING.YEAR }}년</div>
         <div class="info-date-text">{{ WEDDING.MONTH }}월<br />{{ WEDDING.DATE }}일</div>
       </div>
-      <v-divider vertical :thickness="1" class="border-opacity-50"></v-divider>
       <div class="d-flex flex-column align-baseline justify-end info-place">
         <div>{{ WEDDING.DAY }} {{ WEDDING.TIME }}</div>
         <div>{{ WEDDING.PLACE }}, {{ WEDDING.HALL }}</div>
       </div>
     </div>
-    <div
-      data-aos="fade-up"
-      data-aos-duration="1500"
-      class="d-flex flex-row w-100 align-center justify-center"
-    >
-      <WeddingCalendar />
-    </div>
+    <WeddingCalendar />
   </div>
 </template>
 
