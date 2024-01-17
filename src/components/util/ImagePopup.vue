@@ -21,9 +21,9 @@
                 :items-to-show="1"
                 :wrap-around="true"
                 v-model="currentSlide"
-                class="main_wrapper"
+                class="w-100 h-100"
               >
-                <Slide v-for="slide in 17" :key="slide">
+                <Slide v-for="slide in 17" :key="slide" class="w-100 h-100">
                   <div class="d-flex flex-row carousel__item mainImg">
                     <v-img
                       :src="`https://bw-yj.github.io/images/photo${slide}.png`"
@@ -36,8 +36,8 @@
                 </template>
               </Carousel>
             </div>
+            <v-divider thickness="1" class="d-flex pb-3 w-100 h-2px" />
             <div class="thumbnail__wrapper">
-              <v-divider thickness="1" class="d-flex pb-3 w-100 h-2px" />
               <Carousel
                 id="thumbnails"
                 :items-to-show="4"
@@ -47,11 +47,11 @@
               >
                 <Slide v-for="slide in 17" :key="slide">
                   <div
-                    class="carousel__item thumbnail justify-center align-center"
+                    class="d-flex carousel__item thumbnail__wrapper justify-center align-center w-100 h-100"
                     @click="slideTo(slide - 1)"
                   >
                     <v-img
-                      class="thumbnail"
+                      class="thumbnail w-100 h-100"
                       :src="`https://bw-yj.github.io/images/photo${slide}.png`"
                       cover
                       alt="not loaded"
@@ -71,12 +71,13 @@
 import { useimagePopupStore } from '@/stores/imagePopup'
 import { storeToRefs } from 'pinia'
 import { Carousel, Navigation, Slide } from 'vue3-carousel'
-import 'vue3-carousel/dist/carousel.css'
+
 import { ref } from 'vue'
 
 const { isPopupOpened, selectedImage } = storeToRefs(useimagePopupStore())
 const { handleImagePopupOpened } = useimagePopupStore()
 const currentSlide = ref(selectedImage)
+import '/src/styles/carousel.css'
 
 const slideTo = (val) => {
   currentSlide.value = val
@@ -84,28 +85,79 @@ const slideTo = (val) => {
 </script>
 <style lang="scss" scoped>
 @import '/src/styles/common.scss';
+
+#gallery.carousel * {
+  box-sizing: border-box;
+  height: 100%;
+}
+#thumbnails.carousel * {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.carousel__slide {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#gallery {
+  height: 100%;
+}
+
+.carousel__track {
+  transform-style: preserve-3d;
+  height: 100%;
+}
+
+.carousel__slide--sliding {
+  transition: 0.5s;
+}
+
+.carousel__slide {
+  opacity: 0.9;
+  transform: rotateY(-20deg) scale(0.9);
+}
+
+.carousel__slide--active ~ .carousel__slide {
+  transform: rotateY(20deg) scale(0.9);
+}
+
+.carousel__slide--prev {
+  opacity: 1;
+  transform: rotateY(-10deg) scale(0.95);
+}
+
+.carousel__slide--next {
+  opacity: 1;
+  transform: rotateY(10deg) scale(0.95);
+}
+
+.carousel__slide--active {
+  opacity: 1;
+  transform: rotateY(0) scale(1.1);
+}
 .main_wrapper {
+  box-sizing: border-box;
   align-content: center;
   width: 100%;
-  height: 100%;
+  height: 80% !important;
   overflow: hidden;
-  object-fit: cover;
+  object-fit: contain;
 }
-.thumbnail__wrapper {
-  width: 100%;
-  height: 100px;
-  overflow: hidden;
-}
+
 .mainImg {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 .thumbnail {
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   align-content: center;
+  &__wrapper {
+    height: 15%;
+    overflow: hidden;
+  }
 }
 
 .modal {
