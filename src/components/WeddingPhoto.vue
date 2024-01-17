@@ -11,7 +11,7 @@
         <v-col :cols="image.cols">
           <div>
             <v-img
-              :src="`https://bw-yj.github.io/images/photo${imgIdx}.png`"
+              :src="`https://bw-yj.github.io/images/photo_${imgIdx}.png`"
               cover
               alt="test"
               height="100%"
@@ -21,7 +21,7 @@
         </v-col>
       </template>
     </v-row>
-    <span class="font-size-info pt-2">* 이미지 클릭 시 더 많은 사진을 보실 수 있습니다.</span>
+    <span class="font-size-info pt-2">* 이미지 클릭 시 더 크게 사진을 보실 수 있습니다.</span>
   </div>
 </template>
 
@@ -31,13 +31,24 @@ const { handleImagePopupOpened, setImageNo } = useimagePopupStore()
 
 const imageLayout = [
   { cols: 12 },
+  { cols: 3 },
+  { cols: 3 },
   { cols: 6 },
   { cols: 6 },
-  { cols: 12 },
+  { cols: 3 },
+  { cols: 3 },
   { cols: 6 },
+  { cols: 3 },
+  { cols: 3 },
+  { cols: 3 },
+  { cols: 3 },
+  { cols: 3 },
+  { cols: 3 },
   { cols: 6 },
+  { cols: 3 },
+  { cols: 3 },
   { cols: 6 },
-  { cols: 6 }
+  { cols: 3 }
 ]
 
 const handleImageClick = (img) => {

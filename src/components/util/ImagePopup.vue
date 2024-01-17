@@ -20,7 +20,7 @@
                 <Slide v-for="slide in totalPhotos" :key="slide" class="w-100 h-100">
                   <div class="d-flex flex-row carousel__item mainImg">
                     <v-img
-                      :src="`https://bw-yj.github.io/images/photo${slide}.png`"
+                      :src="`https://bw-yj.github.io/images/photo_${slide}.png`"
                       alt="not loaded"
                     ></v-img>
                   </div>
@@ -41,7 +41,7 @@
                   >
                     <v-img
                       class="thumbnail w-100 h-100"
-                      :src="`https://bw-yj.github.io/images/photo${slide}.png`"
+                      :src="`https://bw-yj.github.io/images/photo_${slide}.png`"
                       cover
                       alt="not loaded"
                     ></v-img>
@@ -70,7 +70,7 @@ const { isPopupOpened, selectedImage } = storeToRefs(useimagePopupStore())
 const { handleImagePopupOpened } = useimagePopupStore()
 const currentSlide = ref(selectedImage)
 import '/src/styles/carousel.css'
-const totalPhotos = 17
+const totalPhotos = 18
 
 const slideTo = (val) => {
   currentSlide.value = val
