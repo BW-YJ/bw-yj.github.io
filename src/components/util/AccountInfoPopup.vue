@@ -68,7 +68,7 @@
       </section>
     </transition>
   </div>
-  <v-snackbar v-model="snackbar" :timeout="timeout" rounded="pill" color="blue-grey">
+  <v-snackbar v-model="snackbar" :timeout="timeout" rounded="xl" color="#e2e0d8">
     <div class="d-flex justify-center">{{ text }}</div>
   </v-snackbar>
 </template>
