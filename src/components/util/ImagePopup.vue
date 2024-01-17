@@ -14,16 +14,10 @@
               <v-icon icon="mdi-close" size="small"></v-icon>
             </v-btn>
           </div>
-          <div class="d-flex flex-column justify-space-around modal__window">
+          <div class="d-flex flex-column justify-space-around modal__window align-center w-100">
             <div class="d-flex main_wrapper align-center pb-3">
-              <Carousel
-                id="gallery"
-                :items-to-show="1"
-                :wrap-around="true"
-                v-model="currentSlide"
-                class="w-100 h-100"
-              >
-                <Slide v-for="slide in 17" :key="slide" class="w-100 h-100">
+              <Carousel id="gallery" :items-to-show="1" v-model="currentSlide" class="w-100 h-100">
+                <Slide v-for="slide in totalPhotos" :key="slide" class="w-100 h-100">
                   <div class="d-flex flex-row carousel__item mainImg">
                     <v-img
                       :src="`https://bw-yj.github.io/images/photo${slide}.png`"
@@ -36,16 +30,11 @@
                 </template>
               </Carousel>
             </div>
+            <div class="font-size-info pt-1">{{ currentSlide + 1 }}/{{ totalPhotos }}</div>
             <v-divider thickness="1" class="d-flex pb-3 w-100 h-2px" />
             <div class="thumbnail__wrapper">
-              <Carousel
-                id="thumbnails"
-                :items-to-show="4"
-                :wrap-around="true"
-                v-model="currentSlide"
-                ref="carousel"
-              >
-                <Slide v-for="slide in 17" :key="slide">
+              <Carousel id="thumbnails" :items-to-show="4" v-model="currentSlide" ref="carousel">
+                <Slide v-for="slide in totalPhotos" :key="slide">
                   <div
                     class="d-flex carousel__item thumbnail__wrapper justify-center align-center w-100 h-100"
                     @click="slideTo(slide - 1)"
@@ -58,6 +47,9 @@
                     ></v-img>
                   </div>
                 </Slide>
+                <template #addons>
+                  <Pagination />
+                </template>
               </Carousel>
             </div>
           </div>
@@ -70,7 +62,7 @@
 <script setup>
 import { useimagePopupStore } from '@/stores/imagePopup'
 import { storeToRefs } from 'pinia'
-import { Carousel, Navigation, Slide } from 'vue3-carousel'
+import { Carousel, Navigation, Slide, Pagination } from 'vue3-carousel'
 
 import { ref } from 'vue'
 
@@ -78,6 +70,7 @@ const { isPopupOpened, selectedImage } = storeToRefs(useimagePopupStore())
 const { handleImagePopupOpened } = useimagePopupStore()
 const currentSlide = ref(selectedImage)
 import '/src/styles/carousel.css'
+const totalPhotos = 17
 
 const slideTo = (val) => {
   currentSlide.value = val
@@ -155,6 +148,7 @@ const slideTo = (val) => {
   object-fit: cover;
   align-content: center;
   &__wrapper {
+    width: 100%;
     height: 15%;
     overflow: hidden;
   }
@@ -188,7 +182,7 @@ const slideTo = (val) => {
 
   &__window {
     width: 100%;
-    height: 95%;
+    height: 100%;
     border-radius: 0.4rem;
     overflow: hidden;
     padding: 1rem;
