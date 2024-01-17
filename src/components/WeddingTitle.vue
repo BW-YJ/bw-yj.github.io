@@ -9,7 +9,7 @@
     </div>
 
     <div class="d-flex flex-row justify-center">
-      <img src="https://bw-yj.github.io/images/main.gif" alt="Polaroid Image" class="w-100" />
+      <img src="https://bw-yj.github.io/images/main3.gif" alt="Polaroid Image" class="w-100" />
     </div>
 
     <div class="d-flex flex-row w-100 align-center justify-center ga-3">
