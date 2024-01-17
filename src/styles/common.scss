@@ -1,5 +1,8 @@
 
 .font{
+  &-size-info{
+    font-size: 0.8rem;
+  }
   &-size-md{
     font-size:  1.5rem;
   }
@@ -29,6 +32,7 @@
 .ga-50vw {
   gap: 50vw;
 }
+
 
 .bg-color{
   background-color: #e2e0d8;

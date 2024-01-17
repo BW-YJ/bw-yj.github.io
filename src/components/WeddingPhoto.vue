@@ -21,6 +21,7 @@
         </v-col>
       </template>
     </v-row>
+    <span class="font-size-info pt-2">* 이미지 클릭 시 더 많은 사진을 보실 수 있습니다.</span>
   </div>
 </template>
 
