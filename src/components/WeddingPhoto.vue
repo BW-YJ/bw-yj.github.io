@@ -5,8 +5,8 @@
     class="d-flex flex-column w-100 pa-10 align-center"
   >
     <div class="d-flex flex-column sub-title font-bodoni pb-5">Gallery</div>
-    <v-divider :thickness="1" class="w-100"></v-divider>
-    <v-row class="w-100">
+    <v-divider :thickness="1" class="w-100 pb-2"></v-divider>
+    <v-row class="w-100 p">
       <template v-for="(image, imgIdx) in imageLayout" :key="imgIdx">
         <v-col :cols="image.cols">
           <div>
@@ -59,4 +59,8 @@ const handleImageClick = (img) => {
 
 <style lang="scss" scoped>
 @import '/src/styles/common.scss';
+
+.v-col {
+  padding: 6px;
+}
 </style>
