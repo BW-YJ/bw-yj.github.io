@@ -48,6 +48,7 @@ const imageLayout = [
   { cols: 3 },
   { cols: 3 },
   { cols: 6 },
+  { cols: 3 },
   { cols: 3 }
 ]
 

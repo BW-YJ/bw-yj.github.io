@@ -70,7 +70,7 @@ const { isPopupOpened, selectedImage } = storeToRefs(useimagePopupStore())
 const { handleImagePopupOpened } = useimagePopupStore()
 const currentSlide = ref(selectedImage)
 import '/src/styles/carousel.css'
-const totalPhotos = 18
+const totalPhotos = 19
 
 const slideTo = (val) => {
   currentSlide.value = val
