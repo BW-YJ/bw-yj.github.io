@@ -4,7 +4,7 @@
       <div class="d-flex flex-row ga-2 font-bodoni-itailic info-date">
         <div class="d-flex flex-column align-content-end justify-end info-place">
           <div class="info-date-text d-flex flex-row ga-1">
-            <div>Untill our wedding D</div>
+            <div>Since our wedding D</div>
             <div class="font-maruburi">{{ plusMinus }}</div>
             <div>{{ days }}</div>
           </div>
@@ -24,6 +24,7 @@ import DdayCounter from '@/components/util/DdayCounter.vue'
 
 <style lang="scss" scoped>
 @import '/src/styles/common.scss';
+
 .info-date_year {
   font-size: 1.3rem;
   line-height: 30px;
